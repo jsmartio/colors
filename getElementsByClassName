@@ -1,0 +1,72 @@
+<html>
+
+
+<head>
+
+<style>
+	.boxes {
+		width:30px;
+		height:30px;
+		display:inline-block;
+		cursor:pointer;
+	}
+</style>
+
+<script>
+
+	function doClick(){
+		var disResult = '';
+		var boxid = this.id;
+		console.log(boxid);
+		switch(boxid) {
+			case 'green':
+				disResult = 'the green box clicked';
+				break;
+			case 'red':
+				disResult = 'the red box clicked';
+				break;
+			case 'blue':
+				disResult = 'the blue box clicked';
+				break;
+		}
+		document.getElementById("show").innerHTML = disResult;
+	}
+
+	// initialise the application
+	function init(){
+		//console.log('DOM set');
+		document.getElementById("show").innerHTML = "loaded";
+		
+		// create handle for all boxes `theBoxes
+		var theBoxes = document.getElementsByClassName("boxes");
+		
+		 // establish the number of boxes which require listeners
+		var numBoxes = theBoxes.length;
+		
+		// add listeners to each of the objects now loaded in to the array `theBoxes`
+		for(var i  = 0; i <= numBoxes; i++){
+			if(theBoxes[i]){
+				theBoxes[i].addEventListener('click', doClick, false);
+			}
+		}
+	}
+	
+	window.addEventListener("DOMContentLoaded", init, false);
+	
+
+</script>
+
+</head>
+
+
+<body>
+
+	<div id="red" class="boxes" style="background-color:#ff0000"></div>
+	<div id="blue" class="boxes" style="background-color:#0000ff"></div>
+	<div id="green" class="boxes" style="background-color:#00ff00"></div>
+
+
+<div id="show">results</div>
+
+</body>
+</html?
