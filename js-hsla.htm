@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<script>
+
+function init(){
+	console.log("DOM loaded");
+	var boxes = document.getElementsByClassName("boxes");
+
+	for (var i = 0; i< boxes.length; i++){
+		if(boxes[i] != null){
+			boxes[i].addEventListener("click",doClick, false);
+		}
+	}
+}
+
+function doClick(){
+	var thisID = this.id;
+	console.log(thisID);
+	var temp = thisID.split("-");				//#p1 {background-color: hsl(120, 100%, 50%);}
+//	document.getElementById(thisID).style.backgroundColor = "red";
+	document.getElementById(thisID).style.backgroundColor =  "hsl("+temp[1]+", "+temp[2]+"%, "+temp[3]+"%)";
+}
+
+window.addEventListener("DOMContentLoaded", init, false);
+</script>
+
+<style>
+.boxes {
+	display: inline-block;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+	border:1px #dddddd solid;
+
+}
+</style>
+
+
+<body>
+
+<!-- these boxes will be used to demonstrate hsla //-->
+
+<div id="i-360-80-50-1" class="boxes"></div>
+<div id="i-300-80-50-1" class="boxes"></div>
+<div id="i-250-80-50-1" class="boxes"></div>
+<div id="i-200-80-50-1" class="boxes"></div>
+<div id="i-150-80-50-1" class="boxes"></div>
+<div id="i-100-80-50-1" class="boxes"></div>
+<div id="i-50-580-50-1" class="boxes"></div>
+
+<br><hr>
+
+<div id="messages">Messages</div>
+
+</body>
+
+</html>
