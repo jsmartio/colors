@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+<script>
+
+</script>
+<style>
+.sq {
+	width:62px;
+	height:42px;
+	border:1 px dotted #aaaaaa;
+	display:inline-block;
+	padding:5px;
+}
+body {
+	font-family:"arial narrow",  sans, obuntu;
+}	
+</style>
+
+</head>
+
+<body>
+
+Show variations in opactiy using hsla [i]=hue, [j]=opacity<br>
+
+<script>
+	
+	for (var i = 30; i<=360; i+=30){   ///color wheel outer loop
+	
+		for (var j = 1; j >0; j-= .1){ // opactiy loop
+			i = Math.round( i * 10 ) / 10;
+			j = Math.round( j * 10 ) / 10;
+			document.write("\n\t<div class=\"sq\" style=\"background-color:hsla("+i+", 90%, 50%,"+j+")\">"+i+","+j+"</div>");
+		
+		}
+		document.write("<br>");
+	
+	}
+
+</script>
+
+</body>
+
+</html>
