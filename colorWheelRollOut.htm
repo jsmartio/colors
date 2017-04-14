@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+<style>
+.ite{
+	width:30px;
+	height:30px;
+	display:inline-block;
+	margin:-1;
+	padding:3;
+}
+</style>
+
+
+
+<body>
+<div style="z-index:2">
+	<input type="text" id="holder" value="1"> color wheel spin out
+</div>
+<hr>
+<div id="display">
+<script>
+
+	var temp  = setInterval(makeNew, 30);
+	var s = 90;
+	var l = 50;
+	function makeNew(){
+		
+		var num = document.getElementById("holder").value;
+
+		num++;
+		console.log("num -> "+num );
+		switch (num){
+			case 360:
+				clearInterval(temp)
+				break;
+		}
+		document.getElementById("holder").value = num;
+		document.getElementById("display").innerHTML += "<div class=\"ite\" style=\"background-color:hsl("+num+","+s+"%,"+l+"%\">"+num+"<div>";
+	}
+</script>
+</div>
+</body>
+</html>
