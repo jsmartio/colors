@@ -17,6 +17,7 @@
 		height:20px;
 		border:1 solid #333333;
 		display: inline-block;
+		cursor:pointer;
 	}
 	.chip_box:hover{
 		border-color:#ffffff;
