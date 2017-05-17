@@ -21,6 +21,7 @@
 	}
 	.chip_box:hover{
 		border-color:#ffffff;
+		/* solid */
 	}
 
     </style>
