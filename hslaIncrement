@@ -35,6 +35,7 @@ Show variations in opactiy using hsla [i]=hue, [j]=opacity<br>
 		
 		}
 		document.write("<br>");
+		//clear lines
 	
 	}
 
