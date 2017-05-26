@@ -36,6 +36,7 @@
 	$max_chips = 1000;			// this will be the number of itterations in the color variation process
 	$max_num  = 16777215;	// This is FFFFFF pure white in HEX and RGB where RRGGBB are the placeholders respectivelt
 	$multiplier = intval($max_num/$max_chips);
+	
 ?>
 
 <body>
