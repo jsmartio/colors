@@ -20,6 +20,7 @@
 		text-shadow: .5px .5px #cccccc;
 		font-size:9px !important;
 		padding:3px;
+		/* only situational */
 	}
 	.chip_box:hover{
 		border-color:#ffffff;
