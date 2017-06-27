@@ -62,16 +62,16 @@
 				g = parseInt(gre, 16);
 				
         $("#deetsStick").css("background-color",hColor);
-				var hsl = RGBToHSL(r,g,b);        // returns array h=[0] s=[1] l=[2] []
+	var hsl = RGBToHSL(r,g,b);        // returns array h=[0] s=[1] l=[2] []
 				
         $("#deetsStick").html("This color is "+hColor+ "aka hsl:"+hsl[0]+","+hsl[1]+","+hsl[2]);
 				
         $("#saturation").text(" ");         // Clear the saturation div
         // use Jquery to parse out the variations of saturation in increments of 10 on scale 100
-				for (var i=0; i <= 10; i++){
-					saturation = i*10;
-					$("#saturation").append("<div class=\"cBox2\" style=\"background-color:hsla("+hsl[0]+","+saturation+"%,"+hsl[2]+"%,1)\">"+hsl[0]+","+hsl[1]+","+lightness+"</dv>");
-				}				
+			for (var i=0; i <= 10; i++){
+				saturation = i*10;
+				$("#saturation").append("<div class=\"cBox2\" style=\"background-color:hsla("+hsl[0]+","+saturation+"%,"+hsl[2]+"%,1)\">"+hsl[0]+","+hsl[1]+","+lightness+"</dv>");
+			}				
         // use Jquery to parse out the variations of lightness in increments of 10 on scale 100
 				$("#lightness").text(" ");          // clear the lightness div
 				for (var i=1; i < 10; i++){
