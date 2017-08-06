@@ -30,6 +30,7 @@
 
 <?php 
 	// If there is not a base color to gradient out set one up  / otherwise permit one to be passed via get
+	// push
 	if(!isset($_GET['base_color'])) 	$base_color = "#ffffff";
 	else 											$base_color = $_GET['base_color'];
 
