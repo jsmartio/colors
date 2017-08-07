@@ -18,6 +18,7 @@
 		border:1 solid #333333;
 		display: inline-block;
 		cursor:pointer;
+		/* to show clickable */
 	}
 	.chip_box:hover{
 		border-color:#ffffff;
